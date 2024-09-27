@@ -1,0 +1,26 @@
+{
+  "name": "joespace/acl",
+  "version": "1.0.4",
+  "autoload": {
+    "psr-4": {
+      "Joespace\\ACL\\": "src/"
+    }
+  },
+  "authors": [
+    {
+      "name": "Yousif Aziz",
+      "email": "en.yousif.aziz@gmail.com"
+    }
+  ],
+  "require": {
+    "joespace/core": "^1.0",
+    "spatie/laravel-permission": "^6.9"
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Joespace\\ACL\\ACLServiceProvider"
+      ]
+    }
+  }
+}
