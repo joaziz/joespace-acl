@@ -46,8 +46,10 @@ class UserPolicy
     /**
      * Determine whether the user can delete the model.
      */
-    public function delete(User $user, User $project): bool
+    public function delete(User $user, User $record): bool
     {
+        if ($record->id === $user->id)
+            return false;
         return $user->hasPermissionTo("delete_user");
 
     }
@@ -64,8 +66,10 @@ class UserPolicy
     /**
      * Determine whether the user can permanently delete the model.
      */
-    public function forceDelete(User $user, User $project): bool
+    public function forceDelete(User $user, User $record): bool
     {
+        if ($record->id === $user->id)
+            return false;
         return $user->hasPermissionTo("delete_user");
     }
 
