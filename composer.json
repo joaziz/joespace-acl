@@ -1,6 +1,7 @@
 {
   "name": "joespace/acl",
-  "version": "1.0.4",
+  "version": "1.0.5",
+  "license": "MIT",
   "autoload": {
     "psr-4": {
       "Joespace\\ACL\\": "src/"
